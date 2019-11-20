@@ -16,18 +16,18 @@ function run()
 
     checkedOptions.forEach(function(str) {
         element = document.querySelector('input[value="'+str+'"]');
-        if (!element.checked) {
+        if (element && !element.checked) {
             element.click();
         }
     });
-    
+
     uncheckedOptions.forEach(function(str) {
         element = document.querySelector('input[value="'+str+'"]');
-        if (element.checked) {
+        if (element && element.checked) {
             element.click();
         }
     });
-    
+
     document.querySelector('div.slApply a.applyLink').click();
 }
 
