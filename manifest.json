@@ -1,6 +1,6 @@
 {
   "name": "Team Calendar",
-  "version": "0.3",
+  "version": "0.4",
   "permissions": [
     "https://at.three.com/sites/1145/SitePages/Calendar*",
     "declarativeContent",

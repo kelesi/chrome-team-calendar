@@ -12,7 +12,7 @@
 function run()
 {
     var checkedOptions = ["Payments", "Holidays SK", "Holidays AT"];
-    var uncheckedOptions = ["Wholesale", "Billing", "Integration"];
+    var uncheckedOptions = ["Wholesale", "Billing", "Integration", "Testenvironment Calender"];
 
     checkedOptions.forEach(function(str) {
         element = document.querySelector('input[value="'+str+'"]');
