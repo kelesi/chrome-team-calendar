@@ -11,7 +11,7 @@
 
 function run()
 {
-    var checkedOptions = ["Payments", "Holidays SK", "Holidays AT"];
+    var checkedOptions = ["RiskBusters", "Holidays SK", "Holidays AT"];
     //var uncheckedOptions = ["Wholesale", "Billing", "Integration", "Testenvironment Calender"];
 
     // Uncheck all options first
