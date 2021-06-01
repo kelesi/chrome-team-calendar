@@ -12,8 +12,18 @@
 function run()
 {
     var checkedOptions = ["Payments", "Holidays SK", "Holidays AT"];
-    var uncheckedOptions = ["Wholesale", "Billing", "Integration", "Testenvironment Calender"];
+    //var uncheckedOptions = ["Wholesale", "Billing", "Integration", "Testenvironment Calender"];
 
+    // Uncheck all options first
+    var elementsToDisable = document.querySelectorAll('.slicer .slItem input[type=checkbox]');
+    elementsToDisable.forEach(function(element) {       
+        if (element && element.checked) {
+            element.click();
+        }
+    });
+
+
+    // Check options that we want checked
     checkedOptions.forEach(function(str) {
         element = document.querySelector('input[value="'+str+'"]');
         if (element && !element.checked) {
@@ -21,13 +31,7 @@ function run()
         }
     });
 
-    uncheckedOptions.forEach(function(str) {
-        element = document.querySelector('input[value="'+str+'"]');
-        if (element && element.checked) {
-            element.click();
-        }
-    });
-
+    // Apply selected options
     document.querySelector('div.slApply a.applyLink').click();
 }
 
