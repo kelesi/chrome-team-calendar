@@ -1,16 +1,14 @@
-//document.body.innerHTML = document.body.innerHTML.replace(new RegExp("user1", "g"), "nobody");
-/*
-  "content_scripts": [
-    {
-      "matches": ["https://at.three.com/sites/1145/SitePages/Calendar*"],
-      "js": ["drei_calendar.js"],
-      "run_at": "document_idle"
-    }
-  ],
-*/
-
 function run()
 {
+    run_count++;
+
+    var is_loading = document.querySelector(".fc-view-container span.loader");
+    if (run_count < 20 && is_loading) {
+        console.log('run: Calendar still loading')
+        window.setTimeout(run, config_timeout);
+        return;
+    }
+
     var checkedOptions = ["RiskBusters", "Holidays SK", "Holidays AT"];
     //var uncheckedOptions = ["Wholesale", "Billing", "Integration", "Testenvironment Calender"];
 
@@ -32,11 +30,15 @@ function run()
     });
 
     // Apply selected options
-    document.querySelector('div.slApply a.applyLink').click();
+    applyButton = document.querySelector('div.slApply a.applyLink')
+    if (applyButton) {
+        applyButton.click();
+    }
 }
 
 if (typeof config_timeout == 'undefined') {
-    var config_timeout = 3900;
+    var config_timeout = 1000;
 }
 
-window.setTimeout(run, config_timeout);
+var run_count=0;
+run();
