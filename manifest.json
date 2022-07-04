@@ -1,6 +1,6 @@
 {
   "name": "Team Calendar",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "permissions": [
     "declarativeContent",
     "storage",
@@ -18,21 +18,21 @@
     "128": "images/get_started128.png"
     }
   },
-    "icons": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-        {
-          "matches": ["https://at.three.com/sites/1145/SitePages/Calendar*"],
-          "js": ["drei_calendar.js"],
-          "run_at": "document_end"
-        }
-    ],
+  "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://at.three.com/sites/1145/SitePages/Calendar*"],
+        "js": ["drei_calendar.js"],
+        "run_at": "document_end"
+      }
+  ],
   "manifest_version": 3
 }

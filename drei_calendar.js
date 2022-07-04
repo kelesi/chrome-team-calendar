@@ -32,6 +32,8 @@ function run()
     // Apply selected options
     applyButton = document.querySelector('div.slApply a.applyLink')
     if (applyButton) {
+        //Replace the inline javascript:void() with more reasonable string
+        applyButton.href = '#';
         applyButton.click();
     }
 }
