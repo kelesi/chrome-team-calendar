@@ -9,7 +9,7 @@ function run()
         return;
     }
 
-    var checkedOptions = ["RiskBusters", "Holidays SK", "Holidays AT"];
+    var checkedOptions = ["A912", "RiskBusters", "Holidays SK", "Holidays AT"];
     //var uncheckedOptions = ["Wholesale", "Billing", "Integration", "Testenvironment Calender"];
 
     // Uncheck all options first

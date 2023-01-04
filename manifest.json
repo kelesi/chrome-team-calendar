@@ -1,13 +1,13 @@
 {
   "name": "Team Calendar",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "permissions": [
     "declarativeContent",
     "storage",
     "scripting"
   ],
   "host_permissions": [
-    "https://at.three.com/sites/1145/SitePages/Calendar*"
+    "https://*.at.three.com/*/Calendar*"
   ],  
   "action": {
     "default_popup": "popup.html",
@@ -29,7 +29,7 @@
   },
   "content_scripts": [
       {
-        "matches": ["https://at.three.com/sites/1145/SitePages/Calendar*"],
+        "matches": ["https://*.at.three.com/*/Calendar*"],
         "js": ["drei_calendar.js"],
         "run_at": "document_end"
       }

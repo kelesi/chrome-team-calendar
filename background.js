@@ -9,7 +9,7 @@
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
       chrome.declarativeContent.onPageChanged.addRules([{
         conditions: [new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'at.three.com'},
+          pageUrl: { hostSuffix: '.at.three.com' }
         })
         ],
             actions: [new chrome.declarativeContent.ShowPageAction()]
